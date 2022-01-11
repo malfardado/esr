@@ -5,7 +5,7 @@ insert into restaurante(nome, taxa_frete, cozinha_id) values ('Tik Tok', 22.5, 1
 insert into forma_pagamento(descricao) values ('Dinheiro');
 insert into forma_pagamento(descricao) values ('Cartao de Crédito');
 
-insert into permissao(nome, descricao) value ('cadastrar_usuario','permite realizar cadastro de usuários');
+insert into permissao(nome, descricao) values ('cadastrar_usuario','permite realizar cadastro de usuários');
 
 insert into estado(id, nome) values (1, 'Minas Gerais');
 
