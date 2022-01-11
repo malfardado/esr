@@ -1,0 +1,7 @@
+Senha admin postgres.
+adminpostgres
+Porta
+5432
+
+postgres
+postgres
