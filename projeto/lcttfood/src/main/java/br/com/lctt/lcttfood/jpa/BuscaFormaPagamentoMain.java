@@ -18,7 +18,7 @@ public class BuscaFormaPagamentoMain {
 		
 		FormaPagamentoRepository formaPagamentoRepository = applicationContext.getBean(FormaPagamentoRepository.class);
 		
-		FormaPagamento formaPagamento = formaPagamentoRepository.buscar(1L);
+		FormaPagamento formaPagamento = formaPagamentoRepository.findById(1L).get();
 		
 		
 		System.out.println(formaPagamento.getDescricao());

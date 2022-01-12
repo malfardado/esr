@@ -2,12 +2,10 @@ package br.com.lctt.lcttfood.domain.repository;
 
 import java.util.List;
 
+import br.com.lctt.lcttfood.domain.model.Cozinha;
 import br.com.lctt.lcttfood.domain.model.Permissao;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PermissaoRepository {
-	
-	List<Permissao> listar();
-	Permissao buscar(Long id);
-	Permissao salvar(Permissao permissao);
-	void remover(Permissao permissao);
+public interface PermissaoRepository extends JpaRepository<Permissao, Long> {
+
 }

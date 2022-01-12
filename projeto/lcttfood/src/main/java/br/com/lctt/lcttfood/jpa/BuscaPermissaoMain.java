@@ -18,7 +18,7 @@ public class BuscaPermissaoMain {
 		
 		PermissaoRepository permissaoRepository = applicationContext.getBean(PermissaoRepository.class);
 		
-		Permissao permissao = permissaoRepository.buscar(1L);
+		Permissao permissao = permissaoRepository.findById(1L).get();
 		
 		
 		System.out.println(permissao.getDescricao());

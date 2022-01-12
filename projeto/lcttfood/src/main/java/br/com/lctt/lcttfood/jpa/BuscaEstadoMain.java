@@ -18,7 +18,7 @@ public class BuscaEstadoMain {
 		
 		EstadoRepository estadoRepository = applicationContext.getBean(EstadoRepository.class);
 		
-		Estado estado = estadoRepository.buscar(1L);
+		Estado estado = estadoRepository.findById(1L).get();
 		
 		
 		System.out.println(estado.getNome());

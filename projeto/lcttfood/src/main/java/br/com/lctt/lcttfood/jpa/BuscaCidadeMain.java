@@ -18,7 +18,7 @@ public class BuscaCidadeMain {
 		
 		CidadeRepository cidadeRepository = applicationContext.getBean(CidadeRepository.class);
 		
-		Cidade cidade = cidadeRepository.buscar(1L);
+		Cidade cidade = cidadeRepository.findById(1L).get();
 		
 		
 		System.out.println(cidade.getNome());
