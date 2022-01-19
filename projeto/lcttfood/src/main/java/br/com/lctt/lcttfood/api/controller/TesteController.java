@@ -2,14 +2,14 @@ package br.com.lctt.lcttfood.api.controller;
 
 import br.com.lctt.lcttfood.domain.model.Cozinha;
 import br.com.lctt.lcttfood.domain.model.Restaurante;
+import br.com.lctt.lcttfood.domain.repository.CozinhaRepository;
 import br.com.lctt.lcttfood.domain.repository.RestauranteRepository;
+import br.com.lctt.lcttfood.infraestructure.repository.spec.RestauranteComFreteGratisSpec;
+import br.com.lctt.lcttfood.infraestructure.repository.spec.RestauranteComNomeSemelhanteSpec;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import br.com.lctt.lcttfood.domain.repository.CozinhaRepository;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -69,6 +69,13 @@ public class TesteController {
 	@GetMapping("/restaurantes/count-por-cozinha")
 	public int restaurantesCountPorCozinha(Long cozinhaId) {
 		return restauranteRepository.countByCozinhaId(cozinhaId);
+	}
+
+	@GetMapping("/restaurantes/com-frete-gratis")
+	public List<Restaurante> restaurantesComFreteGratis(String nome) {
+		var comFreteGratis = new RestauranteComFreteGratisSpec();
+		var comNomeSemelhante = new RestauranteComNomeSemelhanteSpec(nome);
+		return restauranteRepository.findAll(comFreteGratis.and(comNomeSemelhante));
 	}
 
 }
