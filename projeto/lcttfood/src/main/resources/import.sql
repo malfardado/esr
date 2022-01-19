@@ -1,6 +1,8 @@
 insert into cozinha(id, nome) values (1, 'Tailandesa');
 insert into cozinha(id, nome) values (2, 'Indiana');
 insert into restaurante(nome, taxa_frete, cozinha_id) values ('Tik Tok', 22.5, 1);
+insert into restaurante(nome, taxa_frete, cozinha_id) values ('Thai Delivery', 9.5, 1);
+insert into restaurante(nome, taxa_frete, cozinha_id) values ('Tuk Tuk Comida Indiana', 5, 1);
 
 insert into forma_pagamento(descricao) values ('Dinheiro');
 insert into forma_pagamento(descricao) values ('Cartao de Crédito');
