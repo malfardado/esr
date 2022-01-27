@@ -11,9 +11,9 @@ insert into cidade (id, nome, estado_id) values (3, 'São Paulo', 2);
 insert into cidade (id, nome, estado_id) values (4, 'Campinas', 2);
 insert into cidade (id, nome, estado_id) values (5, 'Fortaleza', 3);
 
-insert into restaurante(nome, taxa_frete, cozinha_id, endereco_cidade_id, endereco_bairro, endereco_cep, endereco_complemento, endereco_logradouro, endereco_numero) values ('Thai Gourmet', 10, 1, 1,'Chapadão', '35650-000', 'n/a', 'Rua Siderpita', '580');
-insert into restaurante(nome, taxa_frete, cozinha_id, endereco_cidade_id, endereco_bairro, endereco_cep, endereco_complemento, endereco_logradouro, endereco_numero) values ('Thai Delivery', 9.5, 1, 1,'Chapadão', '35650-000', 'n/a', 'Rua Siderpita', '580');
-insert into restaurante(nome, taxa_frete, cozinha_id, endereco_cidade_id, endereco_bairro, endereco_cep, endereco_complemento, endereco_logradouro, endereco_numero) values ('Tuk Tuk Comida Indiana', 15, 2, 1,'Chapadão', '35650-000', 'n/a', 'Rua Siderpita', '580');
+insert into restaurante(nome, taxa_frete, cozinha_id, endereco_cidade_id, endereco_bairro, endereco_cep, endereco_complemento, endereco_logradouro, endereco_numero, data_cadastro, data_atualizacao) values ('Thai Gourmet', 10, 1, 1,'Chapadão', '35650-000', 'n/a', 'Rua Siderpita', '580', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+insert into restaurante(nome, taxa_frete, cozinha_id, endereco_cidade_id, endereco_bairro, endereco_cep, endereco_complemento, endereco_logradouro, endereco_numero, data_cadastro, data_atualizacao) values ('Thai Delivery', 9.5, 1, 1,'Chapadão', '35650-000', 'n/a', 'Rua Siderpita', '580', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
+insert into restaurante(nome, taxa_frete, cozinha_id, endereco_cidade_id, endereco_bairro, endereco_cep, endereco_complemento, endereco_logradouro, endereco_numero, data_cadastro, data_atualizacao) values ('Tuk Tuk Comida Indiana', 15, 2, 1,'Chapadão', '35650-000', 'n/a', 'Rua Siderpita', '580', CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);
 
 insert into forma_pagamento(descricao) values ('Cartao de Crédito');
 insert into forma_pagamento(descricao) values ('Cartao de Débito');
