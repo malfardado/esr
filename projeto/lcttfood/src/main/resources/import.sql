@@ -23,3 +23,8 @@ insert into forma_pagamento(descricao) values ('Dinheiro');
 insert into permissao(nome, descricao) values ('cadastrar_usuario','permite realizar cadastro de usuários');
 
 insert into restaurante_forma_pagamento (restaurante_id, forma_pagamento_id) values (1, 1), (1, 2), (1, 3), (2, 3), (3, 2), (3, 3);
+
+INSERT INTO produto(ativo, descricao, nome, preco, resturante_id) VALUES(true, 'Hamburguer', 'Humburguer de Boi', 20.50, 1);
+INSERT INTO produto(ativo, descricao, nome, preco, resturante_id) VALUES(true, 'X-Tudo', 'X-Tudo completão', 30, 1);
+INSERT INTO produto(ativo, descricao, nome, preco, resturante_id) VALUES(true, 'Bata Frita', 'Bata frita na air fraier', 9.99, 1);
+INSERT INTO produto(ativo, descricao, nome, preco, resturante_id) VALUES(true, 'Refrigerante', 'Refrigerante Lata', 6, 1);
