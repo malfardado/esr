@@ -1,3 +1,8 @@
+--SOMENTE EXECUTADO QUANDO O GENERETE DDL ESTA ATIVADO
+--application.properies
+--#spring.jpa.generate-ddl=true
+--#spring.jpa.hibernate.ddl-auto=create
+
 insert into cozinha(id, nome) values (1, 'Tailandesa');
 insert into cozinha(id, nome) values (2, 'Indiana');
 
