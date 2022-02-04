@@ -22,6 +22,7 @@ import br.com.lctt.lcttfood.domain.exception.EntidadeNaoEncontratadaException;
 import br.com.lctt.lcttfood.domain.model.Cozinha;
 import br.com.lctt.lcttfood.domain.repository.CozinhaRepository;
 import br.com.lctt.lcttfood.domain.service.CadastroCozinhaService;
+import org.springframework.web.server.ResponseStatusException;
 
 
 @RestController
@@ -75,7 +76,11 @@ public class CozinhaController {
 	@DeleteMapping("/{cozinhaId}")
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public void remover(@PathVariable Long cozinhaId) {
-		cadastroCozinha.excluir(cozinhaId);
+		try {
+			cadastroCozinha.excluir(cozinhaId);
+		} catch (EntidadeNaoEncontratadaException e) {
+			throw new ResponseStatusException(HttpStatus.NOT_FOUND, String.format(e.getMessage()));
+		}
 	}
 
 }
